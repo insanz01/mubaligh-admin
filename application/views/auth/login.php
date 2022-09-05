@@ -44,7 +44,7 @@
               <div class="col-4">
                 <button type="submit" class="btn btn-primary btn-block">Sign In</button>
               </div>
-              <div class="col-12">
+              <div class="col-12 mt-2">
                 <a href="http://localhost:3000/login" class="btn btn-primary btn-block">Login sebagai wilayah</a>
               </div>
               <!-- /.col -->
