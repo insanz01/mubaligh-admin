@@ -57,4 +57,27 @@ class MubalikModel extends CI_Model
   {
     return $this->db->get_where("preachers_skill", ['preacher_id' => $id])->row_array();
   }
+
+  public function add_mubaligh($data)
+  {
+    $data['admin_id'] = 1;
+    $data['competence_id'] = 1;
+    $data['value_saw'] = 5.00;
+
+    $data['created_at'] = date("Y-m-d H:i:s", time());
+    $data['updated_at'] = date("Y-m-d H:i:s", time());
+    $data['deleted_at'] = NULL;
+
+    return $this->db->insert('preachers', $data);
+  }
+
+  public function get_pendidikan()
+  {
+    return $this->db->get("education")->result_array();
+  }
+
+  public function get_kabupaten()
+  {
+    return $this->db->get("districts")->result_array();
+  }
 }

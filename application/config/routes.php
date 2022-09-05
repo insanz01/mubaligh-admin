@@ -62,6 +62,8 @@ $route['daerah/dashboard'] = 'daerah/AppController/index';
 $route['daerah/pemohonan'] = 'daerah/AppController/pemohonan';
 
 $route['daerah/mubalik'] = 'daerah/AppController/mubalik';
+$route['daerah/mubalik/add_show'] = 'daerah/AppController/add_mubalik_show';
+$route['daerah/mubalik/add'] = 'daerah/AppController/add_mubalik';
 $route['daerah/mubalik/update'] = 'daerah/AppController/update_mubalik';
 
 $route['daerah/penempatan'] = 'daerah/AppController/penempatan';

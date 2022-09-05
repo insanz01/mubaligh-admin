@@ -51,6 +51,34 @@ class AppController extends CI_Controller
     $this->load->view("templates/admin/panel/footer");
   }
 
+  public function add_mubalik_show()
+  {
+    $data['pendidikan'] = $this->mubalik_m->get_pendidikan();
+    $data['kabupaten'] = $this->mubalik_m->get_kabupaten();
+
+    $this->load->view("templates/admin/panel/header");
+    $this->load->view("templates/admin/panel/sidebar");
+    $this->load->view("templates/admin/panel/navbar");
+    $this->load->view("app/daerah/mubalik/add", $data);
+    $this->load->view("templates/admin/panel/footer");
+  }
+
+  public function add_mubalik()
+  {
+    $data = $this->input->post();
+
+    var_dump($data);
+    die;
+
+    if ($this->mubalik_m->add_mubaligh($data)) {
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Berhasil menambakan data mubaligh</div>');
+    } else {
+      $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Gagal menambakan data mubaligh</div>');
+    }
+
+    redirect('daerah/mubalik');
+  }
+
   public function update_mubalik()
   {
     $data = [

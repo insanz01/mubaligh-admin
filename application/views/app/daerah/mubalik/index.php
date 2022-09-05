@@ -30,9 +30,9 @@
                   <h5>MUBALIGH</h5>
                 </div>
                 <div class="col-6">
-                  <!-- <button class="btn btn-primary float-right" data-toggle="modal" data-target="#tambahModal">
+                  <a class="btn btn-primary float-right" href="<?= base_url('daerah/mubalik/add_show') ?>">
                     <i class="fas fa-fw fa-plus"></i>
-                  </button> -->
+                  </a>
                 </div>
               </div>
             </div>
