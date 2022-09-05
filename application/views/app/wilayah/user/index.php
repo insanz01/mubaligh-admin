@@ -34,22 +34,20 @@
                     <th>Nama</th>
                     <th>Kabupaten</th>
                     <th>Provinsi</th>
-                    <th>Admin</th>
-                    <th>Area</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Nama</td>
-                    <td>Kabupaten</td>
-                    <td>Provinsi</td>
-                    <td>Admin</td>
-                    <td>Area</td>
-                    <td>Status</td>
-                    <td>Action</td>
-                  </tr>
+                  <?php foreach ($users as $user) : ?>
+                    <tr>
+                      <td><?= $user['nama'] ?></td>
+                      <td><?= $user['kabupaten'] ?></td>
+                      <td><?= $user['provinsi'] ?></td>
+                      <td><?= $user['status'] ?></td>
+                      <td>Action</td>
+                    </tr>
+                  <?php endforeach; ?>
                 </tbody>
               </table>
             </div>
